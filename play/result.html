@@ -11,8 +11,8 @@
         <h2>Times Up!</h2>
         <div id="results"></div>
         <div class="button-container">
-            <a href="time-selection.html" class="button">Play Again</a>
-            <a href="../index.html" class="button">Back to Home</a>
+            <a href="time-selection.html" class="cave-button-selection">Play Again</a>
+            <a href="../index.html" class="cave-button-selection">Back to Home</a>
         </div>
     </div>
     <script>
@@ -24,10 +24,10 @@
             const skipped = sessionStorage.getItem('skipped');
 
             results.innerHTML = `
-                <p>+3 Cards: ${scoreThree}</p>
-                <p>+1 Cards: ${scoreOne}</p>
-                <p>-1 Cards: ${skipped}</p>
-                <h3>Total Score: ${score}</h3>
+                <p id="plusThree">+3 Cards: ${scoreThree}</p>
+                <p id="plusOne">+1 Cards: ${scoreOne}</p>
+                <p id="skipCard">-1 Cards: ${skipped}</p>
+                <h3 id="totalScore">Total Score: ${score}</h3>
             `;
         });
     </script>

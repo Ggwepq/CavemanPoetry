@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function loadCards() {
     // In a real scenario, you'd load this from your server
     for (let i = 0; i < 390; i++) {
-        cards.push(`../cards/card-images/Card ${i}.png`);
+        cards.push(`../asset/card-images/Card ${i}.png`);
     }
     shuffleArray(cards);
 }
@@ -45,7 +45,7 @@ function updateTimer() {
     const seconds = timeLeft % 60;
     timerElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
     if (timeLeft <= 10) {
-        timerElement.style.color = 'red';
+        timerElement.style.color = 'indianred';
     }
 }
 

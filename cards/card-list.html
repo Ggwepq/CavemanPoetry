@@ -9,7 +9,7 @@
         .container {
             display: flex;
             flex-direction: column;
-            gap: 50px;
+            gap: 25px;
         }
         .card-grid {
             display: grid;
@@ -30,14 +30,14 @@
     <div class="container">
         <h2>All Cards</h2>
         <div class="card-grid" id="card-grid"></div>
-        <a href="../index.html" class="button">Back to Home</a>
+        <a href="../index.html" class="cave-button-selection">Back to Home</a>
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const cardGrid = document.getElementById('card-grid');
             for (let i = 0; i < 390; i++) {
                 const img = document.createElement('img');
-                img.src = `card-images/Card ${i}.png`;
+                img.src = `../asset/card-images/Card ${i}.png`;
                 img.alt = `Card ${i}`;
                 cardGrid.appendChild(img);
             }

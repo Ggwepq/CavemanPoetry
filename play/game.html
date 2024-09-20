@@ -13,9 +13,11 @@
             <img id="card-image" src="" alt="Card">
         </div>
         <div class="score-buttons">
-            <button onclick="scoreCard(1)" class="button">+1</button>
-            <button onclick="scoreCard(3)" class="button">+3</button>
-            <button onclick="scoreCard(-1)" class="button">Skip</button>
+            <div class="upper-score-buttons">
+                <p onclick="scoreCard(1)" class="plus-one-button">+1</p>
+                <p onclick="scoreCard(3)" class="plus-three-button">+3</p>
+            </div>
+            <p onclick="scoreCard(-1)" class="skip-button">Skip</p>
         </div>
     </div>
     <script src="game.js"></script>
