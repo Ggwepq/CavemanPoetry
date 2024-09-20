@@ -41,7 +41,9 @@ function startTimer() {
 
 function updateTimer() {
     const timerElement = document.getElementById('timer');
-    timerElement.textContent = timeLeft;
+    const minutes = Math.floor(timeLeft / 60);
+    const seconds = timeLeft % 60;
+    timerElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
     if (timeLeft <= 10) {
         timerElement.style.color = 'red';
     }

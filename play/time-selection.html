@@ -5,20 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Select Time - Poetry for Neanderthals</title>
     <link rel="stylesheet" href="../styles.css">
+    <style>
+        .time-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h2>Select Game Time</h2>
-        <div class="button-container">
-            <button onclick="startGame(60)" class="button">1 Minute</button>
-            <button onclick="startGame(120)" class="button">2 Minutes</button>
-            <button onclick="startGame(180)" class="button">3 Minutes</button>
-            <a href="../index.html" class="button">Back To Home</a>
+        <div class="time-input-container">
+            <div class="time-input">
+                <input type="number" id="minutes" name="minutes" min="0" max="59" value="1">
+                <label for="minutes">Minutes</label>
+            </div>
+            <span>:</span>
+            <div class="time-input">
+                <input type="number" id="seconds" name="seconds" min="0" max="59" value="0">
+                <label for="seconds">Seconds</label>
+            </div>
         </div>
+        <div class="time-buttons">
+            <a onclick="startGame()" class="button">Start Game</a>
+            <a href="../index.html" class="button">Back to Home</a>
+        </div>
+
+    </div>
     </div>
     <script>
-        function startGame(time) {
-            sessionStorage.setItem('gameTime', time);
+        function startGame() {
+            const minutes = parseInt(document.getElementById('minutes').value) || 0;
+            const seconds = parseInt(document.getElementById('seconds').value) || 0;
+            const totalTime = (minutes * 60) + seconds;
+            sessionStorage.setItem('gameTime', totalTime);
             window.location.href = 'game.html';
         }
     </script>
