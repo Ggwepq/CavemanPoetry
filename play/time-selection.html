@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Time - Poetry for Neanderthals</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Select Game Time</h2>
+        <div class="button-container">
+            <button onclick="startGame(60)" class="button">1 Minute</button>
+            <button onclick="startGame(120)" class="button">2 Minutes</button>
+            <button onclick="startGame(180)" class="button">3 Minutes</button>
+            <a href="../index.html" class="button">Back To Home</a>
+        </div>
+    </div>
+    <script>
+        function startGame(time) {
+            sessionStorage.setItem('gameTime', time);
+            window.location.href = 'game.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Result - Poetry for Neanderthals</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Times Up!</h2>
+        <div id="results"></div>
+        <div class="button-container">
+            <a href="time-selection.html" class="button">Play Again</a>
+            <a href="../index.html" class="button">Back to Home</a>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const results = document.getElementById('results');
+            const score = sessionStorage.getItem('finalScore');
+            const scoreOne = sessionStorage.getItem('scoreOne');
+            const scoreThree = sessionStorage.getItem('scoreThree');
+            const skipped = sessionStorage.getItem('skipped');
+
+            results.innerHTML = `
+                <p>+3 Cards: ${scoreThree}</p>
+                <p>+1 Cards: ${scoreOne}</p>
+                <p>-1 Cards: ${skipped}</p>
+                <h3>Total Score: ${score}</h3>
+            `;
+        });
+    </script>
+</body>
+</html>

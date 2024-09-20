@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Cards - Poetry for Neanderthals</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            padding: 1rem;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+        .card-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>All Cards</h2>
+        <div class="card-grid" id="card-grid"></div>
+        <a href="../index.html" class="button">Back to Home</a>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cardGrid = document.getElementById('card-grid');
+            for (let i = 0; i < 390; i++) {
+                const img = document.createElement('img');
+                img.src = `card-images/Card ${i}.png`;
+                img.alt = `Card ${i}`;
+                cardGrid.appendChild(img);
+            }
+        });
+    </script>
+</body>
+</html>

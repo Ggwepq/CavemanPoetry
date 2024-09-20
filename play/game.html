@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play - Poetry for Neanderthals</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="container game-container">
+        <div id="timer" class="timer"></div>
+        <div id="card-container" class="card-container">
+            <img id="card-image" src="" alt="Card">
+        </div>
+        <div class="score-buttons">
+            <button onclick="scoreCard(1)" class="button">+1</button>
+            <button onclick="scoreCard(3)" class="button">+3</button>
+            <button onclick="scoreCard(-1)" class="button">Skip</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
