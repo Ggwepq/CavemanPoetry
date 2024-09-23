@@ -47,8 +47,9 @@ body {
 }
 
 #logo {
-    width: 80%;
-    max-width: 1000px;
+    width: 50%;
+    max-width: 80%;
+    min-width: 30%;
 }
 
 h1,
@@ -250,6 +251,10 @@ h2 {
         padding: 1rem;
     }
 
+    #logo {
+        width: 80%;
+    }
+
     h1,
     h2 {
         font-size: 2rem;
@@ -297,6 +302,11 @@ h2 {
 }
 
 @media screen and (max-width: 480px) {
+
+    .logo {
+        width: 80%;
+    }
+
     h1,
     h2 {
         font-size: 1.8rem;
