@@ -31,6 +31,26 @@ body {
     color: white;
 }
 
+.container-main {
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+    padding: 2rem;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+}
+
+#logo {
+    width: 80%;
+    max-width: 1000px;
+}
+
 h1,
 h2 {
     font-size: 2.5rem;
@@ -202,6 +222,10 @@ h2 {
 /* Media queries for responsiveness */
 @media screen and (max-width: 768px) {
     .container {
+        padding: 1rem;
+    }
+
+    .container-main {
         padding: 1rem;
     }
 
