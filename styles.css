@@ -80,7 +80,16 @@ h2 {
     font-size: 1rem;
     color: white;
     cursor: pointer;
+    transition: ease-in-out .3s;
 }
+
+.cave-button-selection:hover {
+    color: antiquewhite;
+    background-image: url(asset/images/score-bg-red.png);
+    background-position: center;
+    background-size: cover;
+}
+
 
 .cave-button:hover,
 .cave-button:active {
@@ -103,7 +112,7 @@ h2 {
 .card-container {
     margin-bottom: 1rem;
     width: 100%;
-    height: 300px;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,7 +122,7 @@ h2 {
 .card-container img {
     max-width: 100%;
     max-height: 100%;
-    height: auto;
+    height: 100%;
     object-fit: contain;
     border-radius: 10px;
 }
@@ -122,7 +131,6 @@ h2 {
     display: flex;
     flex-direction: column;
     font-size: 1.5rem;
-    gap: 10px;
 }
 
 .upper-score-buttons {
@@ -142,20 +150,28 @@ h2 {
 }
 
 .plus-one-button {
-    background-color: #cc9d0f;
+    background-image: url(asset/images/score-bg-yello.png);
+    background-position: center;
+    background-size: cover;
 }
 
 .plus-three-button {
-    background-color: #10D05E;
+    background-image: url(asset/images/caveman-poetry-green.png);
+    background-position: center;
+    background-size: cover;
 }
 
 .skip-button {
-    background-color: #d00f29;
+    background-image: url(asset/images/score-bg-red.png);
+    background-position: center;
+    background-size: cover;
     border: none;
     padding: 10px;
     border-radius: 10px;
-    width: 100%;
+    width: 98%;
+    margin: auto;
 }
+
 
 .plus-one-button,
 .plus-three-button,
@@ -217,12 +233,17 @@ h2 {
 
 #totalScore {
     color: antiquewhite;
+    font-size: larger;
+}
+
+#results {
+    font-size: 1.8rem;
 }
 
 /* Media queries for responsiveness */
 @media screen and (max-width: 768px) {
     .container {
-        padding: 1rem;
+        padding: 2rem;
     }
 
     .container-main {
@@ -245,11 +266,19 @@ h2 {
     }
 
     .card-container {
-        height: 200px;
+        height: 400px;
+    }
+
+    .card-container img {
+        height: 100%;
     }
 
     .score-buttons {
         font-size: 1.2rem;
+    }
+
+    .skip-button {
+        width: 90%;
     }
 
     .time-input input {
@@ -260,6 +289,10 @@ h2 {
 
     .time-input-container span {
         font-size: 1.2rem;
+    }
+
+    #results {
+        font-size: 1.5rem;
     }
 }
 
@@ -280,7 +313,7 @@ h2 {
     }
 
     .card-container {
-        height: 150px;
+        height: 200px;
     }
 
     .score-buttons {
@@ -295,5 +328,9 @@ h2 {
 
     .time-input-container span {
         font-size: 1rem;
+    }
+
+    #results {
+        font-size: 1.2rem;
     }
 }
