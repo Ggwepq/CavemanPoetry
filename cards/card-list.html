@@ -33,19 +33,23 @@
     <div class="container">
         <h2>All Cards</h2>
             <div class="color-options">
-                <input type="radio" id="gray" name="color"onclick="window.location.reload()" value="gray">
+                <input type="radio" id="gray" name="color"onclick="setColor('gray')" value="gray">
                 <label for="gray" class="color-option">Gray</label>
 
-                <input type="radio" id="red" name="color"onclick="window.location.reload()" value="red">
+                <input type="radio" id="red" name="color"onclick="setColor('red')" value="red">
                 <label for="red" class="color-option">Red</label>
 
-                <input type="radio" id="both" name="color" onclick="window.location.reload()" value="both" checked>
+                <input type="radio" id="both" name="color" onclick="setColor('both')" value="both" checked>
                 <label for="both" class="color-option">Both</label>
             </div>
         <div class="card-grid" id="card-grid"></div>
         <a href="../index.html" class="cave-button-selection">Back to Home</a>
     </div>
     <script>
+        function setColor(color) {
+            sessionStorage.setItem('currentColor',color);
+            window.location.reload();
+        }
 
         document.addEventListener('DOMContentLoaded', () => {
             let grayStart = 0, grayEnd = 189, redStart = 190, redEnd = 389;
@@ -53,13 +57,12 @@
 
             const cardGrid = document.getElementById('card-grid');
 
-            const currentColor = document.querySelector('input[name="color"]:checked').value;
-            sessionStorage.setItem('currentColor', currentColor);
-
             let currentSavedColor = 'both';
             if (sessionStorage.getItem('currentColor')){
                 currentSavedColor = sessionStorage.getItem('currentColor');
             }
+
+            if (currentSavedColor) document.querySelector(`input[name="color"][value="${currentSavedColor}"]`).checked = true;
 
             if (currentSavedColor == 'gray'){
                 i = grayStart;
