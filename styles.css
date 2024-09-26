@@ -29,6 +29,9 @@ body {
     background-position: center;
     background-size: cover;
     color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .container-main {
@@ -43,7 +46,6 @@ body {
     justify-content: center;
     align-items: center;
     gap: 50px;
-
 }
 
 #logo {
@@ -184,9 +186,14 @@ h2 {
 
 .time-input-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2rem;
+}
+
+.time-options {
+ display: flex;
+
 }
 
 .time-input {
@@ -220,8 +227,27 @@ h2 {
     margin: 0 0.5rem;
 }
 
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    max-height: 60vh;
+    overflow-y: auto;
+    width: 70%;
+    justify-items: center;
+    align-items: center;
+}
+
+.card-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: ease-in-out .3s;
+}
+
 #plusOne {
-    color: #cc9d0f;
+    color: #d0a510;
 }
 
 #plusThree {
@@ -239,6 +265,30 @@ h2 {
 
 #results {
     font-size: 1.8rem;
+}
+
+.color-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.color-options input[type="radio"] {
+    display: none;
+}
+
+.color-option {
+    padding: 10px 20px;
+    background-image: url(asset/images/score-bg-gray.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.color-options input[type="radio"]:checked + .color-option {
+    background-image: url(asset/images/score-bg-red.png);
+    color: white;
 }
 
 /* Media queries for responsiveness */
@@ -296,6 +346,12 @@ h2 {
         font-size: 1.2rem;
     }
 
+    .card-grid {
+    gap: .5rem;
+    padding: .5rem;
+        width: 80%;
+    }
+
     #results {
         font-size: 1.5rem;
     }
@@ -338,6 +394,13 @@ h2 {
 
     .time-input-container span {
         font-size: 1rem;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: .5rem;
+        padding: .5rem;
+        width: 80%;
     }
 
     #results {

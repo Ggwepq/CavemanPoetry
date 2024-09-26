@@ -3,6 +3,10 @@ let totalScore = 0;
 let scoreOneCounter = 0;
 let scoreThreeCounter = 0;
 let skippedCounter = 0;
+let grayStartIndex = 0;
+let grayEndIndex = 189;
+let redStartIndex = 190;
+let redEndIndex = 389
 let cards = [];
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -14,8 +18,19 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function loadCards() {
+    let i = 0, lastIndex = redEndIndex;
+
+    if (sessionStorage.getItem('selectedColor') == 'gray'){
+        i = grayStartIndex;
+        lastIndex = grayEndIndex;
+    } else if (sessionStorage.getItem('selectedColor') == 'red') {
+        i = redStartIndex;
+        lastIndex = redEndIndex;
+    }
+
+    console.log('Start: ' + i + '\nEnd' + lastIndex)
     // In a real scenario, you'd load this from your server
-    for (let i = 0; i < 390; i++) {
+    for (i; i <= lastIndex; i++) {
         cards.push(`../asset/card-images/Card ${i}.png`);
     }
     shuffleArray(cards);

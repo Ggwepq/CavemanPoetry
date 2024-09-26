@@ -1,34 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Select Time - Poetry for Neanderthals</title>
+    <title>Game Option - Poetry for Neanderthals</title>
     <link rel="icon" type="image/x-icon" href="../asset/images/favicon.ico">
     <link rel="stylesheet" href="../styles.css">
     <style>
         .time-buttons {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            margin-top: 1rem;
         }
 
-
+        h2 {
+            margin-bottom: 0;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <h2 class="title">Game Duration</h2>
-        <p>Default is 1 minute</p>
+        <h2 class="title">Game Option</h2>
         <div class="time-input-container">
-            <div class="time-input">
-                <input type="number" id="minutes" name="minutes" min="0" max="59" value="1">
-                <label for="minutes">Minutes</label>
+            <p>Time (1 min default)</p>
+            <div class="time-options">
+                <div class="time-input">
+                    <input type="number" id="minutes" name="minutes" min="0" max="59" value="1">
+                    <label for="minutes">Minutes</label>
+                </div>
+                <span>:</span>
+                <div class="time-input">
+                    <input type="number" id="seconds" name="seconds" min="0" max="59" value="0">
+                    <label for="seconds">Seconds</label>
+                </div>
             </div>
-            <span>:</span>
-            <div class="time-input">
-                <input type="number" id="seconds" name="seconds" min="0" max="59" value="0">
-                <label for="seconds">Seconds</label>
+        </div>
+        <div class="color-type-container">
+            <p>Color</p>
+            <div class="color-options">
+                <input type="radio" id="gray" name="color" value="gray">
+                <label for="gray" class="color-option">Gray</label>
+
+                <input type="radio" id="red" name="color" value="red">
+                <label for="red" class="color-option">Red</label>
+
+                <input type="radio" id="both" name="color" value="both" checked>
+                <label for="both" class="color-option">Both</label>
             </div>
         </div>
         <div class="time-buttons">
@@ -39,7 +58,7 @@
     </div>
     </div>
     <script>
-        if (sessionStorage.getItem('gameMinute') != null || sessionStorage.getItem('gameSecond') != null){
+        if (sessionStorage.getItem('gameMinute') != null || sessionStorage.getItem('gameSecond') != null) {
             console.log('Game minute is not null');
             document.getElementById('minutes').value = sessionStorage.getItem('gameMinute');
             document.getElementById('seconds').value = sessionStorage.getItem('gameSecond');
@@ -50,6 +69,9 @@
             const seconds = parseInt(document.getElementById('seconds').value) || 0;
             const totalTime = (minutes * 60) + seconds;
 
+            const selectedColor = document.querySelector('input[name="color"]:checked').value;
+            sessionStorage.setItem('selectedColor', selectedColor);
+
             sessionStorage.setItem('gameMinute', minutes);
             sessionStorage.setItem('gameSecond', seconds);
             sessionStorage.setItem('gameTime', totalTime);
@@ -58,4 +80,5 @@
         }
     </script>
 </body>
+
 </html>
