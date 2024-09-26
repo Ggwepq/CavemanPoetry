@@ -23,18 +23,53 @@
             margin-bottom: 0;
         }
 
+        .color-options {
+            margin-top: -10px;
+        }
+
     </style>
 </head>
 <body>
     <div class="container">
         <h2>All Cards</h2>
+            <div class="color-options">
+                <input type="radio" id="gray" name="color"onclick="window.location.reload()" value="gray">
+                <label for="gray" class="color-option">Gray</label>
+
+                <input type="radio" id="red" name="color"onclick="window.location.reload()" value="red">
+                <label for="red" class="color-option">Red</label>
+
+                <input type="radio" id="both" name="color" onclick="window.location.reload()" value="both" checked>
+                <label for="both" class="color-option">Both</label>
+            </div>
         <div class="card-grid" id="card-grid"></div>
         <a href="../index.html" class="cave-button-selection">Back to Home</a>
     </div>
     <script>
+
         document.addEventListener('DOMContentLoaded', () => {
+            let grayStart = 0, grayEnd = 189, redStart = 190, redEnd = 389;
+            let i = grayStart, lastIndex = redEnd;
+
             const cardGrid = document.getElementById('card-grid');
-            for (let i = 0; i < 390; i++) {
+
+            const currentColor = document.querySelector('input[name="color"]:checked').value;
+            sessionStorage.setItem('currentColor', currentColor);
+
+            let currentSavedColor = 'both';
+            if (sessionStorage.getItem('currentColor')){
+                currentSavedColor = sessionStorage.getItem('currentColor');
+            }
+
+            if (currentSavedColor == 'gray'){
+                i = grayStart;
+                lastIndex = grayEnd;
+            } else if (currentSavedColor == 'red'){
+                i = redStart;
+                lastIndex = redEnd;
+            }
+
+            for (i; i < lastIndex; i++) {
                 const img = document.createElement('img');
                 img.src = `../asset/card-images/Card ${i}.png`;
                 img.alt = `Card ${i}`;

@@ -58,11 +58,16 @@
     </div>
     </div>
     <script>
-        if (sessionStorage.getItem('gameMinute') != null || sessionStorage.getItem('gameSecond') != null) {
-            console.log('Game minute is not null');
-            document.getElementById('minutes').value = sessionStorage.getItem('gameMinute');
-            document.getElementById('seconds').value = sessionStorage.getItem('gameSecond');
-        }
+        document.addEventListener('DOMContentLoaded', function () {
+            const savedColor = sessionStorage.getItem('selectedColor');
+
+            if (sessionStorage.getItem('gameMinute') != null || sessionStorage.getItem('gameSecond') != null) {
+                document.getElementById('minutes').value = sessionStorage.getItem('gameMinute');
+                document.getElementById('seconds').value = sessionStorage.getItem('gameSecond');
+            }
+
+            if (savedColor) document.querySelector(`input[name="color"][value="${savedColor}"]`).checked = true;
+        })
 
         function startGame() {
             const minutes = parseInt(document.getElementById('minutes').value) || 0;

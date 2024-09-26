@@ -232,7 +232,7 @@ h2 {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     padding: 1rem;
-    max-height: 60vh;
+    max-height: 50vh;
     overflow-y: auto;
     width: 70%;
     justify-items: center;
