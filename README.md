@@ -1,25 +1,25 @@
 <p align="center"><a href="https://ggwepq.github.io/CavemanPoetry"><img src="https://github.com/Ggwepq/CavemanPoetry/blob/master/asset/images/caveman-poetry-logo.png?raw=true" width="300" alt="Poetry for Neanderthals"></a></p>
-<h2 align="center">Poetry for Neanderthals</h2>
+<h2 align="center">Card Game Speak Like Man Cave</h2>
 
 ***
 
-## Description💬
-Poetry for Neanderthals is a family-friendly party game similar to Taboo® where players earn points by getting their teammates to guess words and phrases. The catch is that they can only use single syllable words to give clues. If they use any words with more than one syllable, the other team gets to bop them with a 2-foot inflatable club.
+## Words to Know Game 💬
+Cave Man Card Game is game where you must use small words to give clues. If you use big words, you get hit with a stick. Teams guess the word. If word is right, you have score. Words are one point three point. Guess one point word first to guess three point phrase. Time is set by your master game.
 
-Note: This version of poetry for neanderthals is used only to practice the game. Memorizing the cards can lead you to winning the game but sacrifices enjoyment.
+Note: This was made to try the game. We dont have cards so we find cards and make tool to try. Dont play to win, play to have fun 🥲.
 
-## Features🗿
-✅ Customizable Timer </br>
-✅ Color filter for the Cards</br>
-✅ Random Sets of Card each Play</br>
-✅ Page to Show List of Cards</br>
-✅ Rules Page</br>
-✅ Game Summary</br>
-❎ Team Kineme</br>
+## Things You Can Do 😉
+✅ Set Own Time </br>
+✅ Set Red Gray Card Dye</br>
+✅ New Card Set Each Play</br>
+✅ Pahe Show Card List</br>
+✅ Page Rule</br>
+✅ See Game Score</br>
+❎ No Team Thing</br>
 
-## Screenshots 👀
-
+## Shot Screen 👀
+Blank
 
 ***
 
-<h2 align="center">Enjoy the Game 🤗</h2>
+<h2 align="center">Pick Card Speak One Time 🗿</h2>
