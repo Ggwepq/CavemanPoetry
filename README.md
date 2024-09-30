@@ -9,13 +9,13 @@ Poetry for Neanderthals is a family-friendly party game similar to Taboo® where
 Note: This version of poetry for neanderthals is used only to practice the game. Memorizing the cards can lead you to winning the game but sacrifices enjoyment.
 
 ## Features🗿
-✅ Customizable Timer
-✅ Color filter for the Cards
-✅ Random Sets of Card each Play
-✅ Page to Show List of Cards
-✅ Rules Page
-✅ Game Summary
-❎ Team Kineme
+✅ Customizable Timer </br>
+✅ Color filter for the Cards</br>
+✅ Random Sets of Card each Play</br>
+✅ Page to Show List of Cards</br>
+✅ Rules Page</br>
+✅ Game Summary</br>
+❎ Team Kineme</br>
 
 ## Screenshots 👀
 
